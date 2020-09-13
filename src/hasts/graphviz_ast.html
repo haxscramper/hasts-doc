@@ -261,6 +261,10 @@ function main() {
     title="makeEdge(idFrom, idTo: NodeId; label: string): Edge"><wbr />make<wbr />Edge<span class="attachedType">NodeId</span></a></li>
   <li><a class="reference" href="#makeAuxEdge%2CNodeId%2CNodeId"
     title="makeAuxEdge(idFrom, idTo: NodeId): Edge"><wbr />make<wbr />Aux<wbr />Edge<span class="attachedType">NodeId</span></a></li>
+  <li><a class="reference" href="#makeRectConsolasNode"
+    title="makeRectConsolasNode(): Node"><wbr />make<wbr />Rect<wbr />Consolas<wbr />Node<span class="attachedType">Node</span></a></li>
+  <li><a class="reference" href="#applyStyle%2CNode%2CNode"
+    title="applyStyle(to: var Node; source: Node): void"><wbr />apply<wbr />Style<span class="attachedType">Node</span></a></li>
   <li><a class="reference" href="#makeConstraintEdge%2CNodeId%2CNodeId"
     title="makeConstraintEdge(idFrom, idTo: NodeId): Edge"><wbr />make<wbr />Constraint<wbr />Edge<span class="attachedType">NodeId</span></a></li>
   <li><a class="reference" href="#addSubgraph%2CGraph%2CGraph"
@@ -507,8 +511,8 @@ The style attribute can be used to modify the appearance of a node.
 <a id="topng,Graph,string,string,string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#topng%2CGraph%2Cstring%2Cstring%2Cstring"><span class="Identifier">topng</span></a><span class="Other">(</span><span class="Identifier">graph</span><span class="Other">:</span> <a href="graphviz_ast.html#Graph"><span class="Identifier">Graph</span></a><span class="Other">;</span> <span class="Identifier">resfile</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">;</span> <span class="Identifier">tmpfile</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;/tmp/dot-file.dot&quot;</span><span class="Other">;</span>
           <span class="Identifier">tmpimage</span><span class="Other">:</span> <span class="Identifier">string</span> <span class="Other">=</span> <span class="StringLit">&quot;/tmp/dot-image-tmp.png&quot;</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">void</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span>
-    <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">UnpackError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Defect</span><span class="Other">,</span> <span class="Identifier">ShellExecError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
-    <span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">ExecIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadEnvEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+    <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">UnpackError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">Defect</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span>
+    <span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">ExecIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadEnvEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Generate file from graph
@@ -604,6 +608,20 @@ Generate file from graph
 
 
 </dd>
+<a id="makeRectConsolasNode"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#makeRectConsolasNode"><span class="Identifier">makeRectConsolasNode</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="graphviz_ast.html#Node"><span class="Identifier">Node</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
+<a id="applyStyle,Node,Node"></a>
+<dt><pre><span class="Keyword">func</span> <a href="#applyStyle%2CNode%2CNode"><span class="Identifier">applyStyle</span></a><span class="Other">(</span><span class="Identifier">to</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="graphviz_ast.html#Node"><span class="Identifier">Node</span></a><span class="Other">;</span> <span class="Identifier">source</span><span class="Other">:</span> <a href="graphviz_ast.html#Node"><span class="Identifier">Node</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">void</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+
+</dd>
 <a id="makeConstraintEdge,NodeId,NodeId"></a>
 <dt><pre><span class="Keyword">func</span> <a href="#makeConstraintEdge%2CNodeId%2CNodeId"><span class="Identifier">makeConstraintEdge</span></a><span class="Other">(</span><span class="Identifier">idFrom</span><span class="Other">,</span> <span class="Identifier">idTo</span><span class="Other">:</span> <a href="graphviz_ast.html#NodeId"><span class="Identifier">NodeId</span></a><span class="Other">)</span><span class="Other">:</span> <a href="graphviz_ast.html#Edge"><span class="Identifier">Edge</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
@@ -677,7 +695,7 @@ Create multile node ids for record nodes
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2020-08-31 15:24:11 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-09-13 20:40:16 UTC</small>
       </div>
     </div>
   </div>
